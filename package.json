@@ -11,9 +11,10 @@
   ],
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "yarn client-install && yarn client-build && env NODE_ENV=production node server.js",
+    "start": "env NODE_ENV=production node server.js",
     "start:back": "env NODE_ENV=production node server.js",
     "start:front": "env NODE_ENV=production cd face && start",
+    "heroku-postbuild": "cd face && yarn && yarn build",
     "client": "cd face && yarn start",
     "client-build": "cd face && yarn build",
     "client-install": "cd face && yarn install",
